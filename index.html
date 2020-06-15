@@ -1,0 +1,1094 @@
+ <style type="text/css">
+     <!--
+     .ddr-page-wrapper * {
+         box-sizing: border-box;
+     }
+
+     .ddr-page-wrapper {
+         position: relative;
+         padding: 0px;
+         margin: 0px;
+         font-family: sans-serif;
+         font-size: 16px;
+     }
+
+     .ddr-page-wrapper .ddr-page {
+         position: relative;
+     }
+
+     .ddr-page-wrapper .ddr-page .ddr-page-section-pre-content::after,
+     .ddr-page-wrapper .ddr-page .ddr-page-section-pre-content::before,
+     .ddr-page-wrapper .ddr-page>div::after,
+     .ddr-page-wrapper .ddr-page>div::before {
+         content: "";
+         display: table;
+         clear: both;
+     }
+
+     .ddr-page-wrapper div,
+     .ddr-page-wrapper h1,
+     .ddr-page-wrapper h2,
+     .ddr-page-wrapper h3,
+     .ddr-page-wrapper h4,
+     .ddr-page-wrapper h5,
+     .ddr-page-wrapper h6,
+     .ddr-page-wrapper p,
+     .ddr-page-wrapper span {
+         line-height: normal;
+     }
+
+     .ddr-page-row,
+     .ddr-page-section-wrapper .ddr-page-section {
+         position: relative;
+         box-sizing: border-box;
+     }
+
+     .ddr-page-row {
+         display: flex;
+         width: 100%;
+     }
+
+     .ddr-page-row__wrap {
+         flex-wrap: wrap;
+     }
+
+     .ddr-page-row__wrap .ddr-page-column__wrap {
+         width: 100% !important;
+     }
+
+     .ddr-page-row__wrap-reverse {
+         flex-wrap: wrap-reverse;
+     }
+
+     .ddr-page-row__wrap-reverse .ddr-page-column__wrap-reverse {
+         width: 100% !important;
+     }
+
+     .ddr-page-column {
+         display: flex;
+         flex-wrap: wrap;
+         box-sizing: border-box;
+         position: relative;
+         align-content: flex-start;
+     }
+
+     .ddr-page-widget {
+         width: 100%;
+         position: relative;
+         overflow: hidden;
+     }
+
+     .dashed-border {
+         border: 1px dashed rgb(135, 135, 135);
+     }
+
+     .headline-edit-wrapper {
+         cursor: text;
+     }
+
+     .section-slider .ddr-page-section-widget-drop-suggestion-wrapper {
+         padding-bottom: 7px;
+     }
+
+     .ddr-page-widget__sections-slider .toolbox-controls {
+         justify-content: flex-start !important;
+     }
+
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__sub-tool--duplicate,
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool--duplicate,
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool--move,
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool--settings {
+         background-color: rgb(226, 118, 37);
+     }
+
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool--delete {
+         background-color: rgb(72, 72, 72);
+     }
+
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool.ddr-widget-toolbox__tool--delete:hover {
+         background-color: rgb(58, 65, 74);
+     }
+
+     .ddr-widget-toolbox--section-slider .toolbox-controls .ddr-widget-toolbox__tool:hover {
+         background-color: rgb(239, 56, 27);
+     }
+
+     .ddr-page-widget-overlay-wrapper:hover .ddr-widget-toolbox--section-slider {
+         border: 2px solid rgb(226, 118, 37) !important;
+     }
+
+     .ddr-widget-toolbox--active.ddr-widget-toolbox--section-slider {
+         border: 2px solid rgb(226, 118, 37);
+     }
+
+     .ddr-widget {
+         background-color: transparent;
+         background-image: none;
+         top: auto;
+         bottom: auto;
+         left: auto;
+         right: auto;
+         height: auto;
+         width: auto;
+         max-height: none;
+         max-width: none;
+         min-height: 0px;
+         min-width: 0px;
+         padding: 0px;
+         margin: 0px;
+         overflow: hidden;
+     }
+
+     .ddr-widget__rich-text {
+         position: relative;
+         cursor: auto;
+         overflow-wrap: break-word;
+         overflow: hidden;
+     }
+
+     .ddr-widget__image {
+         position: relative;
+         max-width: 100%;
+         height: auto;
+         margin: auto;
+         display: flex;
+     }
+
+     .ddr-widget__image a,
+     .ddr-widget__image img {
+         overflow: hidden;
+         width: 100%;
+         max-width: 100%;
+         max-height: 100%;
+     }
+
+     .ddr-widget__image a,
+     .ddr-widget__image a:active,
+     .ddr-widget__image a:focus,
+     .ddr-widget__image a:hover,
+     .ddr-widget__image a:link,
+     .ddr-widget__image a:visited {
+         display: inline-block;
+         vertical-align: middle;
+         color: inherit;
+         text-decoration: none;
+         border: none;
+         box-shadow: none;
+     }
+
+     .ddr-widget__spacer {
+         position: relative;
+         overflow: hidden;
+     }
+
+     .ddr-widget__button {
+         position: relative;
+         display: flex;
+     }
+
+     .ddr-widget__button a {
+         overflow: hidden;
+     }
+
+     .ddr-widget__button>a>div {
+         display: block;
+         overflow: hidden;
+         background-color: rgb(0, 143, 162);
+         box-sizing: content-box;
+         word-break: break-all;
+         transition: all 0.5s ease 0s;
+     }
+
+     .ddr-widget__button a,
+     .ddr-widget__button a:active,
+     .ddr-widget__button a:focus,
+     .ddr-widget__button a:hover,
+     .ddr-widget__button a:link,
+     .ddr-widget__button a:visited {
+         display: inline-block;
+         vertical-align: middle;
+         color: inherit;
+         text-decoration: none;
+         border: none;
+         box-shadow: none;
+     }
+
+     @media (min-width: 1281px) {
+         .ddr-page-row__wrap--max {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--max .ddr-page-column__wrap--max {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--max {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--max .ddr-page-column__wrap-reverse--max {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--max,
+         .ddr-page-widget__hide--max {
+             display: none;
+         }
+     }
+
+     @media (max-width: 1280px) and (min-width: 1025px) {
+         .ddr-page-row__wrap--1280 {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--1280 .ddr-page-column__wrap--1280 {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--1280 {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--1280 .ddr-page-column__wrap-reverse--1280 {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--1280,
+         .ddr-page-widget__hide--1280 {
+             display: none;
+         }
+     }
+
+     @media (max-width: 1024px) and (min-width: 769px) {
+         .ddr-page-row__wrap--1024 {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--1024 .ddr-page-column__wrap--1024 {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--1024 {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--1024 .ddr-page-column__wrap-reverse--1024 {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--1024,
+         .ddr-page-widget__hide--1024 {
+             display: none;
+         }
+     }
+
+     @media (max-width: 768px) and (min-width: 481px) {
+         .ddr-page-row__wrap--768 {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--768 .ddr-page-column__wrap--768 {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--768 {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--768 .ddr-page-column__wrap-reverse--768 {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--768,
+         .ddr-page-widget__hide--768 {
+             display: none;
+         }
+     }
+
+     @media (max-width: 480px) and (min-width: 321px) {
+         .ddr-page-row__wrap--480 {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--480 .ddr-page-column__wrap--480 {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--480 {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--480 .ddr-page-column__wrap-reverse--480 {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--480,
+         .ddr-page-widget__hide--480 {
+             display: none;
+         }
+     }
+
+     @media (max-width: 320px) and (min-width: 0px) {
+         .ddr-page-row__wrap--320 {
+             flex-wrap: wrap;
+         }
+
+         .ddr-page-row__wrap--320 .ddr-page-column__wrap--320 {
+             width: 100% !important;
+         }
+
+         .ddr-page-row__wrap-reverse--320 {
+             flex-wrap: wrap-reverse;
+         }
+
+         .ddr-page-row__wrap-reverse--320 .ddr-page-column__wrap-reverse--320 {
+             width: 100% !important;
+         }
+
+         .ddr-page-column__hide--320,
+         .ddr-page-widget__hide--320 {
+             display: none;
+         }
+     }
+
+     .ddr-page-wrapper body,
+     .ddr-page-wrapper p,
+     .ddr-page-wrapper h2 {
+         font-family: 'Roboto', sans-serif;
+     }
+
+     .ddr-page-wrapper h1,
+     .ddr-page-wrapper h3,
+     .ddr-page-wrapper h4,
+     .ddr-page-wrapper h5,
+     .ddr-page-wrapper h6 {
+         font-family: 'Bebas Neue', cursive;
+         letter-spacing: 0.04em;
+         margin: 0px;
+         line-height: 1.0em;
+     }
+
+     .ddr-page-wrapper h1 {
+         font-size: 62px;
+     }
+
+     .ddr-page-wrapper h2 {
+         font-size: 26px;
+         color: #6b7652;
+     }
+
+     .ddr-page-wrapper h3 {
+         font-size: 32px;
+     }
+
+     .ddr-page-wrapper p,
+     .ddr-page-wrapper ul {
+         font-size: 20px;
+         line-height: 1.6em;
+     }
+
+     .ddr-page-wrapper #ddr-989de44750 {
+         margin-top: -100px;
+     }
+
+     .ddr-page-wrapper #ddr-ab7fba5b6f {
+         margin-top: -350px;
+     }
+
+     @media only screen and (max-width: 1400px) {
+         .ddr-page-wrapper h1 {
+             font-size: 45px;
+         }
+
+         .ddr-page-wrapper h3 {
+             font-size: 26px;
+         }
+
+         .ddr-page-wrapper p,
+         .ddr-page-wrapper ul {
+             font-size: 16px;
+         }
+     }
+
+     @media only screen and (max-width: 480px) {
+         .ddr-page-wrapper h1 {
+             font-size: 31px;
+         }
+
+         .ddr-page-wrapper h3 {
+             font-size: 22px;
+         }
+
+         .ddr-page-wrapper p,
+         .ddr-page-wrapper ul {
+             font-size: 14px;
+         }
+     }
+
+     #ddr-rich-text-3210 * {
+         line-height: 1.6;
+     }
+
+     #ddr-rich-text-3220 * {
+         line-height: 1.6;
+     }
+
+     #ddr-rich-text-4112 * {
+         line-height: 1.6;
+     }
+
+     #button-4113 {
+         background-color: rgba(105, 111, 83, 1);
+         color: rgba(255, 255, 255, 1);
+     }
+
+     #button-4113:hover {
+         background-color: rgba(105, 111, 83, 0.8);
+         border-color: rgba(105, 111, 83, 0.8);
+     }
+
+     #ddr-rich-text-5111 * {
+         line-height: 1.6;
+     }
+
+     #ddr-rich-text-6111 * {
+         line-height: 1.6;
+     }
+
+     #ddr-rich-text-6311 * {
+         line-height: 1.6;
+     }
+
+     #button-7013 {
+         background-color: rgba(255, 255, 255, 1);
+         color: rgba(105, 111, 83, 1);
+     }
+
+     #button-7013:hover {
+         background-color: rgba(255, 255, 255, 0.7);
+         border-color: rgba(255, 255, 255, 0.7);
+     }
+
+     //
+     -->
+ </style>
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+ <script>
+     <!--
+     (function(src, cb) {
+         var s = document.createElement('script');
+         s.setAttribute('src', src);
+         s.onload = cb;
+         (document.head || document.body).appendChild(s);
+     })('https://ucarecdn.com/libs/blinkloader/3.x/blinkloader.min.js', function() {
+         window.Blinkloader.optimize({
+             pubkey: "7e7cb2191e43d9e6ba19",
+             fadeIn: true
+         });
+     })
+
+     //
+     -->
+ </script>
+ <script type="text/javascript">
+     <!--
+     (function() {
+         var head = document.getElementsByTagName('head').item(0),
+             url = 'https://app.dragdropr.com/components/dependency-manager.js?version=1.0.8';
+
+         for (var i = 0; i < head.children.length; i++) {
+             if (head.children.item(i).tagName === 'SCRIPT' && head.children.item(i).src.indexOf(url) !== -1) {
+                 return;
+             }
+         }
+
+         var node = document.createElement('script');
+         node.async = 1;
+         node.src = url;
+         head.insertBefore(node, null);
+     })();
+
+     //
+     -->
+ </script>
+ <div class="ddr-page-wrapper" data-ddr-page-id="a1b8de78-abde-11ea-bd91-0242ac140009">
+     <div class="ddr-page">
+         <div id="ddr-0e7f5d89ea" class="ddr-page-section-wrapper ddr-page-section-wrapper-0" style="background-image: url(&quot;https://cdn.dragdropr.com/520f7cee-c26d-400f-88ea-01087b862440/&quot;); background-size: cover; background-attachment: fixed;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-0">
+                 <div class="ddr-page-section ddr-page-section-0">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 ddr-page-column__hide--320 ddr-page-column__hide--480 ddr-page-column__hide--768" style="width: 16.6667%;">
+                             <div id="ddr-b13da2027f" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 200px;"></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-839c92ca43" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 84px; height: 100px;"><img data-blink-src="https://cdn.dragdropr.com/77cf2a4d-128a-4250-a148-558b7c5ab6a9/" style="width: 84px; height: 100px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-e5e80844d6" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 200px;"></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-a6c74802a6" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-start;"><a target="_self" style="width: auto; margin-left: 30px; margin-right: 30px; height: 100px;"><img src="https://7e7cb2191e43d9e6ba19.ucr.io/-/format/auto/-/quality/lighter/-/resize/x100/https://cdn.dragdropr.com/3c906100-6b44-4708-9ec6-b6da66032b94/" style="width: auto; height: 100px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-9fc8b1e408" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-2 ddr-page-widget__hide--1024 ddr-page-widget__hide--1280 ddr-page-widget__hide--max">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-start;"><a target="_self" style="width: 100%; height: auto; margin-left: 30px; margin-right: 30px; margin-top: 30px;"><img data-blink-src="https://cdn.dragdropr.com/a728306b-0749-40c3-a080-a4b5ea5c2235/" style="height: auto; width: 100%;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-76655f53b5" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-013" class="ddr-widget__rich-text" style="margin: 60px 30px 30px;">
+                                         <h1><span style="color: #ffffff;">Reduzieren Sie geplatzte Reservierungen auf ein Minimum</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
+                             <div id="ddr-5b9feba2d3" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 540px; height: auto; padding-top: 20px; margin-top: 0px; padding-bottom: 20px; padding-left: 20px;"><img data-blink-src="https://cdn.dragdropr.com/0657bf91-e12b-40a2-a62e-8574fef2f73c/" style="height: auto; width: 540px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-20549d0f72" class="ddr-page-section-wrapper ddr-page-section-wrapper-1" style="background-size: cover;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-1">
+                 <div class="ddr-page-section ddr-page-section-1">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-72ecaea402" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 53px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-9fb5fe3501" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 30px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-60235bd611" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-953ca1e5d2" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-1111" class="ddr-widget__rich-text" style="margin: 0px 30px;">
+                                         <h1>Lassen Sie mithilfe der <span style="color: #696f53;">Digitalisierung</span> die Corona-Krise hinter sich</h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-fd1828f2de" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-1112" class="ddr-widget__rich-text" style="margin: 10px 30px 30px;">
+                                         <p>Gewinnen Sie Planungssicherheit und zuverlässige Buchungen, dank einer ausgeklügelten Online-Reservierungssoftware für die Gastronomie, trotz der strengen Auflagen.</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-6de67fc641" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 589px; height: auto; padding-left: 30px;"><img data-blink-src="https://cdn.dragdropr.com/4d126693-5efa-40f7-98a3-de1a5a1a9b50/" style="height: auto; width: 589px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-989de44750" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 450px; height: auto; margin-top: 0px; padding-top: 0px; margin-left: 0px; padding-left: 60px;"><img data-blink-src="https://cdn.dragdropr.com/d8d1d173-f2be-43f7-accc-e3282c2cb186/" style="height: auto; width: 450px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-655ba9221d" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-f5d88ea73f" class="ddr-page-section-wrapper ddr-page-section-wrapper-2" style="background-size: cover; background-color: rgb(121, 125, 98);">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-2">
+                 <div class="ddr-page-section ddr-page-section-2">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-990c97c9da" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
+                             <div id="ddr-3656d47290" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-start;"><a target="_self" style="width: 700px; height: auto; margin-bottom: 30px; margin-top: 30px; margin-right: 30px;"><img data-blink-src="https://cdn.dragdropr.com/ccfd2c69-2fe1-4c00-86bd-0594524887a3/" style="height: auto; width: 700px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 58.3333%;">
+                             <div id="ddr-24dcddaedf" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-2110" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
+                                         <h1><span style="color: #ffffff;">Schnelle und einfache Reservierung –</span><br><span style="color: #ffffff;">für Ihre Kunden und für Sie als Gastronom</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-f490838894" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-2111" class="ddr-widget__rich-text" style="margin: 10px 30px 0px;">
+                                         <p><span style="color: #ffffff;">Erfüllen Sie die gesetzlichen Corona-Vorgaben dank des einfachen Reservierungstools von Reservista. Erfassen Sie Kundendaten, füllen Sie Ihre Tische und lassen Sie Reservista die Bestätigungen übernehmen.</span></p>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-167b9e0c91" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-2112" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
+                                         <ul style="color: #ffffff;">
+                                             <li>kein Personalaufwand Ihrerseits</li>
+                                             <li>ganz ohne Risiko, dank unserer “No-Show” Funktion</li>
+                                             <li>kein zeitfressendes Telefonieren mit Gästen oder E-Mails ohne Reservierungsgarantie</li>
+                                             <li>keine Missverständnisse bei der Reservierung</li>
+                                             <li>kein handschriftliches Reservierungsbuch, das Sie nur im Lokal verfügbar haben</li>
+                                             <li>24 Stunden am Tag, 7 Tage die Woche für Sie und Ihre Gäste online</li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-56bacfcef0" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-f9a36dd08c" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-7eb0bd42dc" class="ddr-page-section-wrapper ddr-page-section-wrapper-3" style="background-size: cover;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-3">
+                 <div class="ddr-page-section ddr-page-section-3">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-68202f3f4c" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 50px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-06c215b85f" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 91.6667%;">
+                             <div id="ddr-0ebd8c1f9c" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-3110" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
+                                         <h1><span style="color: #696f53;">Kunden</span>meinungen</h1>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-2aad6768e2" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
+                             <div id="ddr-1d7f1160be" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-3210" class="ddr-widget__rich-text" style="margin: 10px 30px 30px;">
+                                         <h2>„Nur Vorteile...</h2>
+                                         <p><span style="color: #999999;">Für uns ist das Reservierungssystem echt wichtig. Dass wir beim Ticketverkauf (für Veranstaltungen) nicht mehr die hohen Gebühren für Drittanbieter bezahlen müssen, ist toll!“</span></p>
+                                         <p><em>Knut Walsleben | Fun-Parc Trittau</em></p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
+                             <div id="ddr-916513b341" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-3220" class="ddr-widget__rich-text" style="margin: 10px 30px 30px;">
+                                         <h2>„Gäste werden zu Stammgästen ...</h2>
+                                         <p><span style="color: #999999;">Um Gäste auf Veranstaltungen zu bekommen, muss man sich etwas einfallen lassen. Reservista hilft uns mit einer Reihe von nützlichen und schönen Funktionen dabei, Gäste zu Stammgästen zu machen.</span></p>
+                                         <p><span style="color: #999999;">Eine eigene App hätte uns sonst Tausende Euro und viele Nerven gekostet. Der Support ist sehr kompetent und reagiert prompt. Sogar Verbesserungsvorschläge werden gehört und umgesetzt. Ich möchte Reservista nicht mehr missen.“</span></p>
+                                         <p><em>Knut Walsleben | Fun-Parc Trittau</em></p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-3 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 25%;">
+                             <div id="ddr-ad60e56141" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 600px; height: auto; margin-top: 30px; margin-left: 30px; margin-bottom: 30px;"><img data-blink-src="https://cdn.dragdropr.com/3b42b44e-756b-4f7c-a2b2-94c37df36c3a/" style="height: auto; width: 600px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-3 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-9f89ee9b6d" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-d98503540b" class="ddr-page-section-wrapper ddr-page-section-wrapper-4" style="background-size: cover;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-4">
+                 <div class="ddr-page-section ddr-page-section-4">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-14d6a38ba4" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-54e8e96a5f" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 589px; height: auto;"><img data-blink-src="https://cdn.dragdropr.com/04a2a5c2-2d63-4ccb-9ce6-3b173f2d0467/" style="height: auto; width: 589px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-28003737fc" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 30px;"></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-7b2971ca32" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-4111" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
+                                         <h1><span style="color: #696f53;">Gäste reservieren selbstständig</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-18ca92e025" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-4112" class="ddr-widget__rich-text" style="margin: 30px;">
+                                         <p>Erlauben Sie Ihren Gästen, Tische direkt auf Ihrer bestehenden Website zu reservieren. Egal zu welcher Tageszeit und 100% nach Ihren Vorgaben.</p>
+                                         <p>Erleben Sie selbst, wie schnell Sie ausgebucht sind. Reservierungen werden autonom durch Ihre Gäste getätigt und von Reservista automatisch per E-Mail bestätigt.</p>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-05654ce7c0" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-3 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__button" style="justify-content: flex-start;"><a target="_self" style="margin: 30px;">
+                                             <div id="button-4113" style="padding: 18px 35px; font-size: 18px;">NOCH HEUTE STARTEN</div>
+                                         </a></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-8401cf9119" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-fe482105c9" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-ef0ad5d4e4" class="ddr-page-section-wrapper ddr-page-section-wrapper-5" style="background-size: cover; background-color: rgb(105, 111, 83);">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-5">
+                 <div class="ddr-page-section ddr-page-section-5">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-6623e39ab9" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-3eb28f5a80" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-4a20e03f39" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-5110" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
+                                         <h1><span style="color: #ffffff;">Kinderleichte Verwaltung ohne viel Technik-Bla-Bla</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-a12081daa8" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-5111" class="ddr-widget__rich-text" style="margin: 10px 30px 30px;">
+                                         <p><span style="color: #ffffff;">Melden Sie sich von <strong>überall</strong> an und verwalten Sie Ihre <strong>digitale Gästeliste</strong>, samt Ihrer Buchungen im Handumdrehen.</span></p>
+                                         <p><span style="color: #ffffff;">Managen Sie Ihre verfügbaren Plätze, Öffnungszeiten und die Reservierungsdauer bequem online. Keine endlosen Telefonate mit Ihrer Werbeagentur und ohne teure IT-Techniker oder Programmierer.</span></p>
+                                         <p><span style="color: #ffffff;">Einmal eingerichtet, <strong>jederzeit erweiterbar</strong> und absolut <strong>einfach zu administrieren</strong>. Das gilt auch für alle <strong>optionalen Funktionen</strong> wie die digitale Speisekarte, Gutscheine, die digitale Kundenkarte mit Bindungsprogramm, den Ticketverkauf für Veranstaltungen und dem Vorbestellen von Speisen.</span></p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-7df67777a8" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 636px; height: auto; margin-top: 0px; margin-left: 30px;"><img data-blink-src="https://cdn.dragdropr.com/daa3c8e2-0f64-4577-87e0-3c57664695ad/" style="height: auto; width: 636px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-ab7fba5b6f" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 525px; height: auto; margin-top: 0px; margin-bottom: 0px; margin-left: 60px;"><img data-blink-src="https://cdn.dragdropr.com/683b67fb-a6c2-4b03-8c0b-3c9b4319a1ad/" style="height: auto; width: 525px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-445da34647" class="ddr-page-section-wrapper ddr-page-section-wrapper-6" style="background-size: cover;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-6">
+                 <div class="ddr-page-section ddr-page-section-6">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-56cb86a81d" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-a6061b5229" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 70px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-d406f06f02" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-6110" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
+                                         <h1><span style="color: #696f53;">No-show? No problem!</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-e0e1641655" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-6111" class="ddr-widget__rich-text" style="margin: 0px 30px 10px;">
+                                         <p>Der “Null-Umsatz-Tisch” gehört damit zur Vergangenheit. Legen Sie optional eine Gebühr fest, sollte ein Gast die Reservierung platzen lassen.</p>
+                                         <p>Dabei hinterlegt ihr Kunde bei Tischbuchung ein Zahlungsmittel. Sollte der Gast nicht erscheinen (no-show), dann sind Sie am Drücker. Sie haben es in der Hand, ob sie die vereinbarte Gebühr einziehen oder nicht.</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-e76f14b373" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 600px; height: auto;"><img data-blink-src="https://cdn.dragdropr.com/a8f3c07b-9761-4845-849c-5f8d827d2d1d/" style="height: auto; width: 600px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                             <div id="ddr-5dac10b9aa" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 50px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="ddr-page-row ddr-page-row-3 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-012454c439" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-start;"><a target="_self" style="width: 800px; height: auto;"><img data-blink-src="https://cdn.dragdropr.com/2665ad70-fc50-4779-a83e-426094bd4f65/" style="height: auto; width: 800px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-8085223ed4" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-6310" class="ddr-widget__rich-text" style="margin: 10px 30px 0px;">
+                                         <h1><span style="color: #696f53;">Gastregistrierung ohne Zettelwirtschaft</span></h1>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-20b5c7c27e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-6311" class="ddr-widget__rich-text" style="margin: 0px 30px 50px;">
+                                         <p>Reservista bringt auch ein kostenloses Modul mit, welches das Problem der Zettelwirtschaft bei der verpflichtenden Gastregistrierung löst.</p>
+                                         <p>Sie erhalten einen QR-Code, welchen der Gast nur scannen muss, wodurch er auf ein persönliches Registrierungsformular weitergeleitet wird. Auf Knopfdruck haben Sie dann jederzeit die erforderlichen Berichte für die Behörden zur Hand.</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-04634b6ecc" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="ddr-b726e3cec5" class="ddr-page-section-wrapper ddr-page-section-wrapper-7" style="background-image: url(&quot;https://cdn.dragdropr.com/decd4106-2967-4951-a079-2f28cc3a8a18/&quot;); background-size: cover;">
+             <div class="ddr-page-section-pre-content ddr-page-section-pre-content-7">
+                 <div class="ddr-page-section ddr-page-section-7">
+                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 8.33333%;">
+                             <div id="ddr-bc89673c65" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
+                             <div id="ddr-11a10cd502" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__spacer" style="height: 100px;"></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-d9c66d0723" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-start;"><a target="_self" style="width: 600px; height: auto; margin-left: 30px; margin-right: 30px; margin-bottom: 50px;"><img data-blink-src="https://cdn.dragdropr.com/a728306b-0749-40c3-a080-a4b5ea5c2235/" style="height: auto; width: 600px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-567b2b3801" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-7012" class="ddr-widget__rich-text" style="margin: 0px 50px 0px 30px;">
+                                         <h1><span style="color: #ffffff;">Jetzt 2 Monate Gratis</span></h1>
+                                         <h3><span style="color: #ffffff;">das unschlagbare Corona-Spar-Angebot testen</span></h3>
+                                         <p><span style="color: #ffffff;">Kleingedrucktes suchen Sie bei uns lange.<br><strong>Reservista ist schon ab € 24,99 pro Monat buchbar.</strong> Keine Einrichtungsgebühr, keine Überraschungen und kein Mindestumsatz. Einfach muss es sein und es muss sich für Sie auszahlen.</span></p>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-3fe14c989b" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-3 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__button" style="justify-content: flex-start;"><a target="_self" style="margin: 30px;">
+                                             <div id="button-7013" style="padding: 18px 35px; font-size: 18px; font-weight: bold;">JETZT ANGEBOTE TESTEN</div>
+                                         </a></div>
+                                 </div>
+                             </div>
+                             <div id="ddr-aa74fd51f6" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-4 ">
+                                 <div class="ddr-widget">
+                                     <div id="ddr-rich-text-7014" class="ddr-widget__rich-text" style="margin: 10px 30px 30px;">
+                                         <p><span style="color: #ffffff;"><strong>Profitieren Sie von mehr Reservierungen, </strong>wesentlich weniger Ausfällen. Buchen Sie noch heute Ihre unverbindliche und kostenlose Demoversion.</span></p>
+                                         <p><a style="color: #ffffff;" href="mailto:hi@reservista.net">hi@reservista.net</a></p>
+                                         <p><span style="color: #ffffff;">(GÜLTIG BIS 01.08.2020)</span></p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
+                             <div id="ddr-b4c2b3eab0" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 540px; height: auto; margin-top: 30px;"><img data-blink-src="https://cdn.dragdropr.com/0657bf91-e12b-40a2-a62e-8574fef2f73c/" style="height: auto; width: 540px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div id="ddr-8e11bcadb6" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
+                                 <div class="ddr-widget">
+                                     <div class="ddr-widget__image" style="justify-content: flex-end;"><a target="_self" style="width: 525px; height: auto; margin-top: 30px; margin-left: 60px; margin-bottom: 30px;"><img data-blink-src="https://cdn.dragdropr.com/1d269b56-2317-4717-8fc3-ae983a51c9c5/" style="height: auto; width: 525px;"></a>
+                                         <div class="ddr-hot-spots__items-wrapper"></div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
